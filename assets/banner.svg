@@ -1,0 +1,103 @@
+<svg viewBox="0 0 1200 360" width="1200" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f24"/>
+      <stop offset="55%" stop-color="#131a3a"/>
+      <stop offset="100%" stop-color="#1a1240"/>
+    </linearGradient>
+    <linearGradient id="keyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd76a"/>
+      <stop offset="55%" stop-color="#f5a623"/>
+      <stop offset="100%" stop-color="#c97a12"/>
+    </linearGradient>
+    <linearGradient id="cyanLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#33e0ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#33e0ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#33e0ff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#33e0ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#33e0ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffcf5c" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffcf5c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#2a3568" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="360"/>
+    <line x1="450" y1="0" x2="450" y2="360"/>
+    <line x1="750" y1="0" x2="750" y2="360"/>
+    <line x1="1000" y1="0" x2="1000" y2="360"/>
+  </g>
+
+  <!-- background glows -->
+  <circle cx="960" cy="90" r="220" fill="url(#glow)"/>
+  <circle cx="880" cy="260" r="160" fill="url(#goldGlow)"/>
+
+  <!-- circuitry lines connecting nodes, evoking pluggable ecosystem -->
+  <g stroke="#3f4d8c" stroke-width="2" fill="none" opacity="0.7">
+    <path d="M60,300 L180,300 L220,260 L320,260"/>
+    <path d="M60,250 L140,250 L160,220 L260,220"/>
+    <path d="M700,320 L760,320 L790,290"/>
+    <path d="M700,60 L820,60 L850,90"/>
+  </g>
+  <g fill="#5eead4">
+    <circle cx="320" cy="260" r="4"/>
+    <circle cx="260" cy="220" r="4"/>
+    <circle cx="180" cy="300" r="4"/>
+    <circle cx="140" cy="250" r="4"/>
+  </g>
+
+  <!-- animated-feel connector line under headline -->
+  <rect x="60" y="235" width="480" height="2" fill="url(#cyanLine)"/>
+
+  <!-- Right side: large stylized origin key with circuit teeth -->
+  <g transform="translate(900,180) rotate(-18)">
+    <!-- key head (circle ring) -->
+    <circle cx="0" cy="0" r="86" fill="none" stroke="url(#keyGrad)" stroke-width="18"/>
+    <circle cx="0" cy="0" r="86" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+    <!-- inner keyhole -->
+    <circle cx="0" cy="0" r="26" fill="#0b0f24"/>
+    <path d="M-8,10 L0,-14 L8,10 Z" fill="#0b0f24"/>
+    <!-- shaft -->
+    <rect x="80" y="-9" width="200" height="18" fill="url(#keyGrad)"/>
+    <!-- teeth: pluggable pins -->
+    <rect x="220" y="9" width="16" height="26" fill="url(#keyGrad)"/>
+    <rect x="248" y="9" width="16" height="40" fill="url(#keyGrad)"/>
+    <rect x="276" y="9" width="16" height="22" fill="url(#keyGrad)"/>
+  </g>
+
+  <!-- small floating plug/connector nodes near key to suggest ecosystem -->
+  <g fill="none" stroke="#33e0ff" stroke-width="2" opacity="0.85">
+    <circle cx="1080" cy="90" r="10"/>
+    <line x1="1080" y1="100" x2="1080" y2="130"/>
+    <circle cx="1055" cy="300" r="8"/>
+    <line x1="1055" y1="292" x2="1030" y2="260"/>
+  </g>
+  <g fill="#33e0ff">
+    <circle cx="1080" cy="90" r="3"/>
+    <circle cx="1055" cy="300" r="3"/>
+  </g>
+
+  <!-- Headline -->
+  <text x="60" y="165" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="72" fill="#f5f7ff" textLength="700" lengthAdjust="spacingAndGlyphs">
+    Origin Key
+  </text>
+  <text x="60" y="245" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="72" fill="#f5f7ff" textLength="440" lengthAdjust="spacingAndGlyphs">
+    Generator
+  </text>
+
+  <!-- Tagline -->
+  <text x="60" y="290" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#a9b6e6" textLength="760" lengthAdjust="spacingAndGlyphs">
+    Generates pluggable origin keys for the authentication ecosystem
+  </text>
+</svg>
